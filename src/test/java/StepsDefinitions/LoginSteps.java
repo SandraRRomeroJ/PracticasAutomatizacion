@@ -1,38 +1,78 @@
 package StepsDefinitions;
 
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import Pages.LoginPage;
+
+import java.util.concurrent.TimeUnit;
+
+import javax.security.auth.spi.LoginModule;
+
+import io.cucumber.java.en.*;
+
 
 public class LoginSteps {
 
-//	@Given("is on login page")
-//	public void is_on_login_page() {
+	private static final LoginPage Login = null;
+	
+//	WebDriver driver = null;
+//	
+//	LoginPage login;
+//	
+//	@SuppressWarnings("deprecation")
+//	@Given("Opens browser")
+//	public void opens_browser() {
+//	
+//		System.out.println("Inside step - browser is open");
 //		
-//		System.out.println("Inside Step - user is on login page");
+//		System.setProperty("webdriver.chrome.driver","C:/Users/Hitss/Documents/Eclipse/practica/src/test/resources/Drivers/chromedriver.exe");
+//
+//		driver = new ChromeDriver();
+//
+//		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+//	}
+//
+//	@And("User is in the login page")
+//	public void user_is_in_the_login_page() {
+//		
+//		
+//		driver.navigate().to("http://mxsrvwasmui1t.alico.corp/ClienteUnico/login.jsp");
+//	}
+//
+//	@When("^user enters(.*) and (.*)$")
+//	public void user_enters_valid_user_name_and_password(String username, String password)throws InterruptedException {
+//	   
+//		login = new LoginPage(driver);
+//		
+//		Login.enterUserName(username);
+//		Login.enterPassword(password);   
+//		
+//		//driver.findElement(By.id("login_usuario")).sendKeys(username);
+//		//driver.findElement(By.id("login_contrasenya")).sendKeys(password);
 //		
 //	}
 //
-//	@When("user enters user name and password")
-//	public void user_enters_user_name_and_password() {
-//		
-//		System.out.println("Inside Step - user enters username and password");
-//		
-//	}
-//
-//	@And("clics on login button")
+//		@And("clics on login button")
 //	public void clics_on_login_button() {
 //		
-//		System.out.println("Inside Step-Clics on login button");
+//		login.clickLogin();
+//		
+//		//driver.findElement(By.id("btn_label")).click();
 //		
 //	}
 //
-//	@Then("user is directed to home page")
-//	public void user_is_directed_to_home_page() {
+//	@Then("user is directed to the home page")
+//	public void user_is_directed_to_the_home_page() {
 //		
-//		System.out.println("Inside Step-user is directed to home page");
-		
-	}
-		
-	}
+//		System.out.println("Inside step - user is directed to the home page");
+//		
+//			
+//		driver.close();
+//	driver.quit();
+//	
+//	}
+//	
+//	}
