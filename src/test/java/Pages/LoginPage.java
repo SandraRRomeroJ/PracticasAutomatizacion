@@ -2,6 +2,7 @@ package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.SendKeysAction;
 
 public class loginpage {
 
@@ -12,12 +13,18 @@ public class loginpage {
 	By txt_password=By.id("login_contrasenya");
 
 	By btn_login=By.id("btn_label");
-	
+
 	By txt_rfc=By.id("div_completar");
+
+	By btn_cliente=By.xpath("//h5[contains(text(),'Cliente')]");
+
+	By txt_LNegocio=By.id("lineaNegocioSlct");
+
+	By listLNegocio=By.xpath("//*[@id=\"widget_lineaNegocioSlct\"]/div[1]/input");
 
 
 	public loginpage(WebDriver driver) {
-		
+
 		this.driver=driver;
 	}
 
@@ -42,12 +49,33 @@ public class loginpage {
 	}
 
 	public void Checkrfcisdisplayed() {
-		
+
 		driver.findElement(txt_rfc).isDisplayed();
-		
+
+	}
+
+	public void clickcliente(){
+
+
+		driver.findElement(btn_cliente).click();
+
+
+	}
+
+	public void clicklineadenegocio() {
+
+
+		driver.findElement(listLNegocio).click();
+
+
+	}
+
+	public void EntersLNegocio(String lineanegocio) {
+
+		driver.findElement(txt_LNegocio).sendKeys(lineanegocio);
+
 	}
 	
-
+	
 }
-
 
